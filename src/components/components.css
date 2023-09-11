@@ -1,0 +1,79 @@
+/*#region  HOME COMPONENT*/
+
+.filter-row {
+  height: 7vh;
+}
+
+.filter-col {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.main-content-row {
+  height: 80vh;
+}
+
+/*#endregion*/
+
+/*#region  REMOVE & BOUGHT COMPONENT*/
+
+.empty-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+.empty-icon {
+  font-size: 9rem;
+}
+
+/*#endregion*/
+
+/*#region CARDS COMPONENT*/
+
+.card {
+  width: 20vw;
+  height: 30hvh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttons-wrapper {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 5vw;
+}
+
+/*#endregion*/
+
+/*#region Popover COMPONENT*/
+
+.filter-open-btn {
+  margin-left: 0.5rem;
+  width: 10vw;
+}
+
+.date-label-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-btns-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*#endregion*/

@@ -1,0 +1,16 @@
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+.not-found-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.not-found-content h1 {
+  font-size: 6rem;
+}
