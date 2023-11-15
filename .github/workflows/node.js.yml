@@ -31,5 +31,23 @@ jobs:
     - name: create env file
       run: |
         touch .env
-        echo ${{ secrets.FIRST_SECRET}} >> .env
+        echo ${{ secrets.API_URL}} >> .env
+        echo ${{ secrets.AUTH_API_URL}} >> .env
+        echo ${{ secrets.IMAGE_URL}} >> .env
+        echo ${{ secrets.BASE_API_URL}} >> .env
+        echo ${{ secrets.STAGING_API_URL}} >> .env
+        echo ${{ secrets.STAGING_IMAGES_URL}} >> .env
+        echo ${{ secrets.STAGING_STORE_API_URL}} >> .env
         chmod 600 .env
+
+    - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@main
+      with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          
+          EXCLUDE: "/dist/, /node_modules/"
+ 
