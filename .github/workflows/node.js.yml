@@ -29,7 +29,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: Deploy to Server
+    - name: create env file
       run: |
-          # Add your deployment script or commands here
-          # Example: scp -r build/* user@your-server:/path/to/destination
+        touch .env
+        echo ${{ secrets.FIRST_SECRET}} >> .env
+        chmod 600 .env
